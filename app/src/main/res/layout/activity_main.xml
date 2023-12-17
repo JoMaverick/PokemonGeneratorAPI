@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/wallpaper_pokemon">
+
+    <!-- Pokemon Image -->
+    <ImageView
+        android:id="@+id/imgPokemon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/PokeName"
+        android:layout_marginTop="100dp"/>
+
+    <!-- Pokemon Name -->
+    <TextView
+        android:id="@+id/PokeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: "
+        app:layout_constraintTop_toBottomOf="@+id/imgPokemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/PokeWeight"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Pokemon Width -->
+    <TextView
+        android:id="@+id/PokeWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight (kg): "
+        app:layout_constraintTop_toBottomOf="@+id/PokeName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/PokeHeight"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Pokemon Height -->
+    <TextView
+        android:id="@+id/PokeHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height (cm): "
+        app:layout_constraintTop_toBottomOf="@+id/PokeWeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnGenerateRandomPokemon"
+        android:layout_marginTop="16dp"/>
+    
+    <!-- Generate Random Button -->
+    <Button
+        android:id="@+id/btnGenerateRandomPokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Random Pokemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PokeHeight"
+        android:layout_marginTop="16dp"/>
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>
